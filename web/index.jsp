@@ -1,3 +1,8 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page import="beans.ServicioLocal"%>
+<%@page import="javax.naming.InitialContext"%>
+<%! ServicioLocal servicio; %>
+
 <%@include file="templates/header.jsp" %>
 <%@include file="templates/menu.jsp" %>
 

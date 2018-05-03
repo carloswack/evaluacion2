@@ -1,11 +1,28 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page import="beans.ServicioLocal"%>
+<%@page import="javax.naming.InitialContext"%>
+<%! ServicioLocal servicio; %>
+
+
+<%
+    InitialContext ctx=new InitialContext();
+    servicio=(ServicioLocal) ctx.lookup("java:global/Veterinaria/Servicio!beans.ServicioLocal");
+    %>
+<c:set var="servicio" scope="page" value="<%=servicio%>"/>
+
 <%@include file="templates/header.jsp" %>
 <%@include file="templates/menu.jsp" %>
 
  <div class="row"
      <div class="col s6 offset-s3">
          <div class="card-panel">
-             <p class="center-align">Ingresar Mascota</p>
-             <form action="control.do" method="post">
+             
+             <form action="ingresar.do" method="post">
+                 <div class="input-field">
+                    <input name="rut" id="rut" type="text" class="validate">
+                    <label for="rut">RUT</label>
+                 </div>
+                 <p class="center-align">Ingresar Mascota</p>
                  <div class="input-field">
                     <input name="id" id="id" type="text" class="validate">
                     <label for="id">ID Mascota</label>
@@ -56,6 +73,9 @@
                   <button type="submit" class="btn right">Agregar</button>
                  <br/><br/>
              </form>
+             <p>
+                 ${requestScope.msg}
+             </p>
          </div>
   
     </div>

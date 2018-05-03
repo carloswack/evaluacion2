@@ -12,7 +12,7 @@ public class Servicio implements ServicioLocal {
 
 
     public Servicio() {
-        veterinarios.add(new Veterinario ("19695419-8","Juan","Perez",48,"M","Punta Arenas",2223244,987766543,"AV. Sudireccion #0543","Mascotas"));
+        veterinarios.add(new Veterinario ("19696418-8","Juan","Perez",48,"M","Punta Arenas",2223244,987766543,"AV. Sudireccion #0543","Mascotas"));
     }
     @Override
     public Veterinario addVeterinario(Veterinario veterinario) {
@@ -46,12 +46,5 @@ public class Servicio implements ServicioLocal {
     public ArrayList<Enfermedad> getEnfermedad(String rut) {
         return listaE;
     }
-
-   
-
-    
-    
-
- 
   
 }
