@@ -10,15 +10,15 @@ public interface ServicioLocal {
    
     Veterinario addVeterinario(Veterinario veterinario);
 
+    void addMascota(Mascota mascota);
+
+    void addEnfermedad(Enfermedad enfermedad);
+   
     ArrayList<Veterinario> getVeterinarios();
+    
+    ArrayList<Mascota> getMascotas();
 
-    Mascota addMascota(Mascota mascota, String rut);
-
-    Enfermedad addEnfermedad(Enfermedad enfermedad,String rut);
-
-    ArrayList<Mascota> getMascotas(String rut);
-
-    ArrayList<Enfermedad> getEnfermedad(String rut);
+    ArrayList<Enfermedad> getEnfermedad();
 
    
 }

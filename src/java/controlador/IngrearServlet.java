@@ -43,8 +43,8 @@ public class IngrearServlet extends HttpServlet {
         }catch(NumberFormatException e){
             e.printStackTrace();
         }
-        servicio.addMascota(new Mascota (id,nombreMasc,especie,raza,edad,sexo,fechaNac), rut);
-        servicio.addEnfermedad(new Enfermedad (nombreEnf,descripcion,tiempoDuracion,tratamiento), rut);
+        servicio.addMascota(new Mascota (id,nombreMasc,especie,raza,edad,sexo,fechaNac));
+        servicio.addEnfermedad(new Enfermedad (nombreEnf,descripcion,tiempoDuracion,tratamiento));
         response.sendRedirect("agregar.jsp");
     }
 

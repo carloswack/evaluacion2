@@ -19,31 +19,28 @@ public class Servicio implements ServicioLocal {
         veterinarios.add(veterinario);
         return null;
     }
-     @Override
+    
+    @Override
+    public void addMascota(Mascota mascota) {
+       listaM.add(mascota);
+    }
+
+    @Override
+    public void addEnfermedad(Enfermedad enfermedad) {
+        listaE.add(enfermedad);
+    } 
+    @Override
     public ArrayList<Veterinario> getVeterinarios() {
         return veterinarios;
     }
-    
 
     @Override
-    public Mascota addMascota(Mascota mascota, String rut) {
-       listaM.add(mascota);
-        return null;
-    }
-
-    @Override
-    public Enfermedad addEnfermedad(Enfermedad enfermedad, String rut) {
-        listaE.add(enfermedad);
-        return null;
-    }
-
-    @Override
-    public ArrayList<Mascota> getMascotas(String rut) {
+    public ArrayList<Mascota> getMascotas() {
         return listaM;
     }
 
     @Override
-    public ArrayList<Enfermedad> getEnfermedad(String rut) {
+    public ArrayList<Enfermedad> getEnfermedad() {
         return listaE;
     }
   

@@ -72,12 +72,15 @@
                  </div>
                   <button type="submit" class="btn right">Agregar</button>
                  <br/><br/>
+                 
              </form>
+             <a href="index.jsp"><button type="submit" class="btn left">Volver</button></a>
              <p>
                  ${requestScope.msg}
              </p>
+             
          </div>
-  
+ 
     </div>
 
 <%@include file="templates/footer.jsp" %>
